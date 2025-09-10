@@ -1,0 +1,33 @@
+:root {
+    --bg-color: #000;
+    --accent-color: pink;
+    --hover-color: orange;
+    --link-color: red;
+    --text-color: purple;
+    --font-family: "Open Sans", sans-serif;
+    --font-title: "Archivo Black", sans-serif;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+h1, h2, h3, h4 {
+    font-family: var(--font-title);
+}
+.nav-link {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    transition: all 100ms ease-in;
+    padding: 10px;
+    margin: 3px;
+    display: inline-block;
+    border: 3px solid var(--link-color);
+    border-radius: 20px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    transition: all 300ms ease-out;
+    background-color: var(--hover-color);
+    color: var(--link-color);
+}
