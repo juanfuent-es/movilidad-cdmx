@@ -1,33 +1,301 @@
+/* ==================================================
+   Tema: Señales de tránsito
+   - Tipos: Barlow (títulos, mayúsculas), Roboto (cuerpo)
+   Colores: fondo blanco, texto oscuro, acentos verde/azul de señales
+   ================================================== */
+
 :root {
-    --bg-color: #000;
-    --accent-color: pink;
-    --hover-color: orange;
-    --link-color: red;
-    --text-color: purple;
-    --font-family: "Open Sans", sans-serif;
-    --font-title: "Archivo Black", sans-serif;
+    /* Tipografía */
+    --font-title: "Barlow", sans-serif;
+    --font-body: "Roboto", sans-serif;
+
+    /* Fondos y texto */
+    --color-bg: #ffffff;           /* fondo principal blanco */
+    --color-surface: #f7fafc;      /* superficies claras */
+    --color-text: #0e0f10;         /* texto principal oscuro */
+    --color-text-muted: #4b5563;   /* texto secundario */
+
+    /* Acentos MUTCD/ISO aproximados */
+    --signal-green: #007a33;       /* verde guía */
+    --signal-blue: #005eb8;        /* azul información */
+    --signal-red: #d90429;         /* rojo alto (se mantiene) */
+    --signal-yellow: #f6b21f;      /* amarillo precaución */
+
+    /* Enlaces y botones derivados */
+    --color-link: var(--signal-blue);
+    --color-link-hover: #004a91;
+
+    --color-button: var(--signal-green);
+    --color-button-text: #ffffff;
+    --color-button-border: var(--signal-green);
+    --color-button-hover-bg: #006328;
+    --color-button-hover-text: #ffffff;
 }
+
 body {
-    background-color: var(--bg-color);
-    font-family: var(--font-family);
-    color: var(--text-color);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
 }
-h1, h2, h3, h4 {
+
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
+
+h1 { font-weight: 800; }
+h2 { font-weight: 700; }
+h3 { font-weight: 600; }
+h4, h5, h6 { font-weight: 600; }
+
+a {
+    color: var(--color-link);
+}
+
+a:hover, a:focus {
+    color: var(--color-link-hover);
+}
+
+/* Tarjetas / superficies */
+.card, .surface, header, footer {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+/* Navegación: variantes de botón */
 .nav-link {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    transition: all 100ms ease-in;
-    padding: 10px;
-    margin: 3px;
-    display: inline-block;
-    border: 3px solid var(--link-color);
-    border-radius: 20px;
-    text-decoration: none;
+    background: var(--color-surface);
+    color: var(--color-text);
 }
-.nav-link:hover {
-    transition: all 300ms ease-out;
-    background-color: var(--hover-color);
-    color: var(--link-color);
+
+.button {
+    background: var(--color-button);
+    color: var(--color-button-text);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    transition: all 200ms ease-out;
+    background-color: rgba(54, 179, 126, 0.12);
+    color: var(--color-button);
+}
+
+/* Botón primario: rojo (alto) para llamadas clave */
+.button-primary, .nav-link.primary {
+    background-color: var(--signal-red);
+    border-color: var(--signal-red);
+    color: #ffffff;
+}
+
+.button-primary:hover,
+.button-primary:focus,
+.nav-link.primary:hover,
+.nav-link.primary:focus {
+    background-color: #b70322;
+    border-color: #b70322;
+    color: #ffffff;
+}
+
+/* Botón atención: amarillo (precaución) */
+.button-warning {
+    background-color: var(--signal-yellow);
+    border-color: var(--signal-yellow);
+    color: #222222;
+}
+
+.button-warning:hover,
+.button-warning:focus {
+    background-color: #e6b800;
+    border-color: #e6b800;
+    color: #1a1a1a;
+}
+
+/* ================= Skeleton overrides ================= */
+/* Base button: verde guía (#00593e) con borde tipo señal */
+.button {
+    background-color: #00593e;
+    border: 3px solid #00593e;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #024c35;
+    border-color: #024c35;
+    color: #ffffff;
+}
+
+/* Primario: rojo alto para CTA */
+.button.button-primary {
+    background-color: var(--signal-red);
+    border-color: var(--signal-red);
+    color: #ffffff;
+}
+
+.button.button-primary:hover,
+.button.button-primary:focus {
+    background-color: #b70322;
+    border-color: #b70322;
+    color: #ffffff;
+}
+
+/* Variante outline reutilizando colores actuales */
+.button.is-outline {
+    background-color: transparent;
+    color: currentColor;
+    /* usa el color de borde según el contexto actual */
+}
+
+/* Outline acorde al color del botón actual */
+.button.is-outline {
+    border-color: currentColor;
+}
+
+.button.is-outline:hover,
+.button.is-outline:focus {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Botones señalética específicos (relleno y outline) */
+#main-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+#main-header nav ul li {
+    margin: 0;
+}
+
+.nav-link {
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 1em;
+}
+
+/* Verde #00593e */
+.button.button-green,
+.nav-link.button-green {
+    background-color: #00593e;
+    border-color: #00593e;
+    color: #ffffff;
+}
+.button.button-green:hover,
+.button.button-green:focus,
+.nav-link.button-green:hover,
+.nav-link.button-green:focus {
+    background-color: #024c35;
+    border-color: #024c35;
+    color: #ffffff;
+}
+.button.button-green.is-outline,
+.nav-link.button-green.is-outline {
+    background-color: transparent;
+    color: #00593e;
+    border-color: #00593e;
+}
+.button.button-green.is-outline:hover,
+.button.button-green.is-outline:focus,
+.nav-link.button-green.is-outline:hover,
+.nav-link.button-green.is-outline:focus {
+    background-color: rgba(0, 89, 62, 0.12);
+    color: #00593e;
+}
+
+/* Azul #1e26b0 */
+.button.button-blue,
+.nav-link.button-blue {
+    background-color: #1e26b0;
+    border-color: #1e26b0;
+    color: #ffffff;
+}
+.button.button-blue:hover,
+.button.button-blue:focus,
+.nav-link.button-blue:hover,
+.nav-link.button-blue:focus {
+    background-color: #182090;
+    border-color: #182090;
+    color: #ffffff;
+}
+.button.button-blue.is-outline,
+.nav-link.button-blue.is-outline {
+    background-color: transparent;
+    color: #1e26b0;
+    border-color: #1e26b0;
+}
+.button.button-blue.is-outline:hover,
+.button.button-blue.is-outline:focus,
+.nav-link.button-blue.is-outline:hover,
+.nav-link.button-blue.is-outline:focus {
+    background-color: rgba(30, 38, 176, 0.12);
+    color: #1e26b0;
+}
+
+/* Amarillo #f6b21f (texto oscuro para contraste) */
+.button.button-yellow,
+.nav-link.button-yellow {
+    background-color: #f6b21f;
+    border-color: #f6b21f;
+    color: #222222;
+}
+.button.button-yellow:hover,
+.button.button-yellow:focus,
+.nav-link.button-yellow:hover,
+.nav-link.button-yellow:focus {
+    background-color: #d99c1c;
+    border-color: #d99c1c;
+    color: #111111;
+}
+.button.button-yellow.is-outline,
+.nav-link.button-yellow.is-outline {
+    background-color: transparent;
+    color: #b37e15;
+    border-color: #f6b21f;
+}
+.button.button-yellow.is-outline:hover,
+.button.button-yellow.is-outline:focus,
+.nav-link.button-yellow.is-outline:hover,
+.nav-link.button-yellow.is-outline:focus {
+    background-color: rgba(246, 178, 31, 0.14);
+    color: #8c6311;
+}
+
+/* Rojo señal (usa variable existente) */
+.button.button-red,
+.nav-link.button-red {
+    background-color: var(--signal-red);
+    border-color: var(--signal-red);
+    color: #ffffff;
+}
+.button.button-red:hover,
+.button.button-red:focus,
+.nav-link.button-red:hover,
+.nav-link.button-red:focus {
+    background-color: #b70322;
+    border-color: #b70322;
+    color: #ffffff;
+}
+.button.button-red.is-outline,
+.nav-link.button-red.is-outline {
+    background-color: transparent;
+    color: var(--signal-red);
+    border-color: var(--signal-red);
+}
+.button.button-red.is-outline:hover,
+.button.button-red.is-outline:focus,
+.nav-link.button-red.is-outline:hover,
+.nav-link.button-red.is-outline:focus {
+    background-color: rgba(217, 4, 41, 0.12);
+    color: var(--signal-red);
 }

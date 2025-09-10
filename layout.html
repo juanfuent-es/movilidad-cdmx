@@ -4,32 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Movilidad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="./css/layout.css">
   </head>
   <body>
     <header>
-      <nav class="container">
+      <nav>
         <ul>
-          <li><a class="nav-link" href="index.html" title="Ir a Home">Home</a></li>
-          <li><a class="nav-link" href="transporte.html" title="Acerca de">About</a></li>
-          <li><a class="nav-link" href="problematica.html" title="Contáctanos">Contact</a></li>
+          <li><a class="nav-link" href="index.html" title="Inicio">Inicio</a></li>
+          <li><a class="nav-link" href="transporte.html" title="Transporte">Transporte</a></li>
+          <li><a class="nav-link" href="problematica.html" title="Problemáticas">Problemáticas</a></li>
+          <li><a class="nav-link" href="comparativa.html" title="Comparativa">Comparativa</a></li>
+          <li><a class="nav-link" href="recursos.html" title="Recursos">Recursos</a></li>
         </ul>
       </nav>
     </header>
     <main class="container">
-      <h1>Movilidad</h1>
-      <hr>
-      <p>lorem ipsum dolor sit amet</p>
+      <!-- Hero -->
+      <div class="twelve columns">
+        <h1>Movilidad</h1>
+      </div>
+      <!-- <section class="row" style="margin-top:24px;">
+        <div class="eight columns">
+          <h2>Guía de layout con Skeleton</h2>
+          <p class="muted">Estructura base para páginas del proyecto de movilidad: grid 12 columnas, utilidades y componentes simples.</p>
+          <a class="button button-primary" href="#grid">Ver grid</a>
+          <a class="button" href="#tabla">Ver tabla</a>
+        </div>
+        <aside class="four columns">
+          <div class="card">
+            <h3>Tip</h3>
+            <p>Usa
+              <code>.container</code>
+              para envolver contenidos y
+              <code>.row</code>
+              +
+              <code>.columns</code>
+              para layout responsivo.</p>
+          </div>
+        </aside>
+      </section> -->
+      <!-- Grid de 3 columnas -->
+      <!-- <section id="grid" class="row" style="margin-top:24px;">
+        <div class="one-third column">
+          <h3>Bloque 1</h3>
+          <p>Contenido de ejemplo para una tarjeta o resumen.</p>
+          <a class="button" href="#">Acción</a>
+        </div>
+        <div class="one-third column">
+          <h3>Bloque 2</h3>
+          <p>Contenido de ejemplo para una tarjeta o resumen.</p>
+          <a class="button" href="#">Acción</a>
+        </div>
+        <div class="one-third column">
+          <h3>Bloque 3</h3>
+          <p>Contenido de ejemplo para una tarjeta o resumen.</p>
+          <a class="button" href="#">Acción</a>
+        </div>
+      </section> -->
+      <!-- Tabla full width -->
+      <!-- <section id="tabla" class="row" style="margin-top:24px;">
+        <div class="twelve columns">
+          <h3>Ejemplo de tabla</h3>
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Sección</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inicio</td>
+                <td>Resumen del sitio y navegación.</td>
+                <td>Listo</td>
+              </tr>
+              <tr>
+                <td>Transporte</td>
+                <td>Descripción y contexto.</td>
+                <td>En progreso</td>
+              </tr>
+              <tr>
+                <td>Problemáticas</td>
+                <td>Análisis de factores clave.</td>
+                <td>Pendiente</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section> -->
     </main>
     <footer class="container">
-      <h2>Footer</h2>
+      <div class="row">
+        <div class="twelve columns">
+          <p class="muted">Layout de referencia con Skeleton y tema de señalética.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

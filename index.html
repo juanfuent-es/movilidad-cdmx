@@ -2,126 +2,218 @@
 <html lang="es-MX">
   <head>
     <!-- aquí van los metadatos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    />
+    >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movilidad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Ecosistema Móvil de la CDMX</h1>
-        <p class="tagline">Proyecto web del Bloque 1 (septiembre–octubre): documentar y comunicar la movilidad urbana con arquitectura de información, estilo y publicación.</p>
-      </header>
-      <section id="descripcion">
-        <h2>1) Descripción del proyecto</h2>
-        <p>Construirás un sitio web estático (HTML + CSS, sin JavaScript) con varias páginas conectadas por un menú común. El tema se centra en un <strong>medio de transporte de la CDMX</strong> y su contexto. El objetivo es transformar tus artículos en una <strong>colección navegable</strong> con estructura semántica, estilo consistente y documentación pública en GitHub Pages.</p>
+    <header class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h1>Ecosistema Móvil de la CDMX</h1>
+          <p class="tagline">Proyecto web del Bloque 1 (septiembre–octubre): documentar y comunicar la movilidad urbana con arquitectura de información, estilo y publicación.</p>
+        </div>
+      </div>
+      <nav class="row nav-row" aria-label="Navegación principal">
+        <div class="twelve columns">
+          <ul class="nav-list">
+            <li><a href="index.html" class="button button-primary">Inicio</a></li>
+            <li><a href="transporte.html" class="button">Transporte</a></li>
+            <li><a href="problematica.html" class="button">Problemáticas</a></li>
+            <li><a href="comparativa.html" class="button">Comparativa</a></li>
+            <li><a href="recursos.html" class="button">Recursos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section id="descripcion" class="row">
+        <div class="eight columns">
+          <h2>1) Descripción del proyecto</h2>
+          <p>Construirás un sitio web estático (HTML + CSS, sin JavaScript) con varias páginas conectadas por un menú común. El tema se centra en un
+            <strong>medio de transporte de la CDMX</strong>
+            y su contexto. El objetivo es transformar tus artículos en una
+            <strong>colección navegable</strong>
+            con estructura semántica, estilo consistente y documentación pública en GitHub Pages.</p>
+        </div>
+        <aside class="four columns">
+          <div class="card">
+            <h3>CTA rápido</h3>
+            <p class="muted">Crea estas páginas para iniciar:</p>
+            <ul>
+              <li><code>index.html</code>
+                (inicio)</li>
+              <li><code>transporte.html</code>
+                (tema)</li>
+              <li><code>problematica.html</code>
+                (análisis)</li>
+            </ul>
+          </div>
+        </aside>
       </section>
-
       <section id="objetivo">
         <h2>2) Objetivo general</h2>
         <ul>
-          <li>Estructurar contenido con <strong>HTML5 semántico</strong> y <strong>arquitectura de información</strong> clara.</li>
-          <li>Aplicar <strong>CSS externo</strong> (paleta + tipografía) para lograr jerarquía visual y consistencia.</li>
-          <li><strong>Publicar</strong> el sitio en GitHub Pages y documentarlo en <code>README.md</code>.</li>
+          <li>Estructurar contenido con
+            <strong>HTML5 semántico</strong>
+            y
+            <strong>arquitectura de información</strong>
+            clara.</li>
+          <li>Aplicar
+            <strong>CSS externo</strong>
+            (paleta + tipografía) para lograr jerarquía visual y consistencia.</li>
+          <li><strong>Publicar</strong>
+            el sitio en GitHub Pages y documentarlo en
+            <code>README.md</code>.</li>
         </ul>
       </section>
-
       <section id="secciones-obligatorias">
-        <h2>3) Secciones <u>obligatorias</u> (3 páginas)</h2>
-        <div class="grid">
-          <div>
+        <h2>3) Secciones
+          <u>obligatorias</u>
+          (3 páginas)</h2>
+        <div class="row">
+          <div class="one-third column">
             <h3>Inicio</h3>
             <ul>
-              <li><strong>Archivo sugerido:</strong> <code>index.html</code></li>
-              <li><strong>Contiene:</strong> introducción breve al tema, mapa de navegación del sitio, imagen o gráfico con <code>alt</code>.</li>
-              <li><strong>UI:</strong> <code>&lt;header&gt;</code> + <code>&lt;nav&gt;</code> comunes, llamada a explorar secciones.</li>
+              <li><strong>Archivo sugerido:</strong>
+                <code>index.html</code></li>
+              <li><strong>Contiene:</strong>
+                introducción breve al tema, mapa de navegación del sitio, imagen o gráfico con
+                <code>alt</code>.</li>
+              <li><strong>UI:</strong>
+                <code>&lt;header&gt;</code>
+                +
+                <code>&lt;nav&gt;</code>
+                comunes, llamada a explorar secciones.</li>
             </ul>
           </div>
-          <div>
+          <div class="one-third column">
             <h3>Transporte seleccionado</h3>
             <ul>
-              <li><strong>Archivo sugerido:</strong> <code>transporte.html</code></li>
-              <li><strong>Contiene:</strong> descripción del medio, funcionamiento, fortalezas, limitaciones, fotos con créditos.</li>
-              <li><strong>Semántica:</strong> <code>&lt;article&gt;</code> y <code>&lt;section&gt;</code> para subtemas.</li>
+              <li><strong>Archivo sugerido:</strong>
+                <code>transporte.html</code></li>
+              <li><strong>Contiene:</strong>
+                descripción del medio, funcionamiento, fortalezas, limitaciones, fotos con créditos.</li>
+              <li><strong>Semántica:</strong>
+                <code>&lt;article&gt;</code>
+                y
+                <code>&lt;section&gt;</code>
+                para subtemas.</li>
             </ul>
           </div>
-          <div>
+          <div class="one-third column">
             <h3>Problemáticas</h3>
             <ul>
-              <li><strong>Archivo sugerido:</strong> <code>problematica.html</code></li>
-              <li><strong>Contiene:</strong> análisis de factores (seguridad, accesibilidad, costos, tráfico, impacto ambiental).</li>
-              <li><strong>Recursos:</strong> enlaces a fuentes oficiales (gobierno, datos abiertos) y notas al pie.</li>
+              <li><strong>Archivo sugerido:</strong>
+                <code>problematica.html</code></li>
+              <li><strong>Contiene:</strong>
+                análisis de factores (seguridad, accesibilidad, costos, tráfico, impacto ambiental).</li>
+              <li><strong>Recursos:</strong>
+                enlaces a fuentes oficiales (gobierno, datos abiertos) y notas al pie.</li>
             </ul>
           </div>
         </div>
-        <p class="muted">Estas tres páginas son el núcleo del proyecto. Deben compartir el mismo <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> y <code>&lt;footer&gt;</code>, y enlazarse entre sí.</p>
+        <p class="muted">Estas tres páginas son el núcleo del proyecto. Deben compartir el mismo
+          <code>&lt;header&gt;</code>,
+          <code>&lt;nav&gt;</code>
+          y
+          <code>&lt;footer&gt;</code>, y enlazarse entre sí.</p>
       </section>
-
       <section id="secciones-optativas">
-        <h2>4) Secciones <u>optativas</u> (elige 2 adicionales)</h2>
+        <h2>4) Secciones
+          <u>optativas</u>
+          (elige 2 adicionales)</h2>
         <ul>
-          <li><strong>Comparativa</strong> (<code>comparativa.html</code>): pros y contras frente a 1–2 alternativas.</li>
-          <li><strong>Recursos</strong> (<code>recursos.html</code>): apps, mapas, enlaces oficiales y bibliografía.</li>
-          <li><strong>Historia</strong> (<code>historia.html</code>): evolución del sistema/medio en la ciudad.</li>
-          <li><strong>Experiencia del usuario</strong> (<code>ux.html</code>): recorridos típicos, señales, puntos de dolor.</li>
-          <li><strong>Datos y métricas</strong> (<code>datos.html</code>): cifras clave citadas y explicadas.</li>
+          <li><strong>Comparativa</strong>
+            (<code>comparativa.html</code>): pros y contras frente a 1–2 alternativas.</li>
+          <li><strong>Recursos</strong>
+            (<code>recursos.html</code>): apps, mapas, enlaces oficiales y bibliografía.</li>
+          <li><strong>Historia</strong>
+            (<code>historia.html</code>): evolución del sistema/medio en la ciudad.</li>
+          <li><strong>Experiencia del usuario</strong>
+            (<code>ux.html</code>): recorridos típicos, señales, puntos de dolor.</li>
+          <li><strong>Datos y métricas</strong>
+            (<code>datos.html</code>): cifras clave citadas y explicadas.</li>
         </ul>
         <p class="muted">Selecciona dos según el enfoque de tu tema. Mantén el mismo patrón visual y semántico.</p>
       </section>
-
       <section id="requisitos">
         <h2>5) Requisitos técnicos</h2>
         <ul>
-          <li><strong>HTML5 semántico:</strong> <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</li>
-          <li><strong>CSS externo:</strong> archivo <code>styles.css</code> enlazado en todas las páginas.</li>
-          <li><strong>Accesibilidad:</strong> contraste adecuado, tipografía legible, <code>alt</code> en imágenes.</li>
-          <li><strong>Consistencia:</strong> mismo header/nav/footer, misma paleta y tipografía.</li>
-          <li><strong>Assets:</strong> nombrado claro de archivos, créditos de imágenes cuando aplique.</li>
+          <li><strong>HTML5 semántico:</strong>
+            <code>&lt;header&gt;</code>,
+            <code>&lt;main&gt;</code>,
+            <code>&lt;article&gt;</code>,
+            <code>&lt;section&gt;</code>,
+            <code>&lt;aside&gt;</code>,
+            <code>&lt;footer&gt;</code>.</li>
+          <li><strong>CSS externo:</strong>
+            archivo
+            <code>styles.css</code>
+            enlazado en todas las páginas.</li>
+          <li><strong>Accesibilidad:</strong>
+            contraste adecuado, tipografía legible,
+            <code>alt</code>
+            en imágenes.</li>
+          <li><strong>Consistencia:</strong>
+            mismo header/nav/footer, misma paleta y tipografía.</li>
+          <li><strong>Assets:</strong>
+            nombrado claro de archivos, créditos de imágenes cuando aplique.</li>
         </ul>
       </section>
-
       <section id="entregables">
         <h2>6) Entregables y publicación</h2>
         <ul>
-          <li><strong>Repositorio GitHub</strong> con código fuente.</li>
-          <li><strong>README.md</strong> con: descripción, estructura de secciones, paleta/tipo, y <strong>link</strong> al sitio.</li>
-          <li><strong>GitHub Pages</strong> habilitado en la rama correspondiente (<span class="pill">Settings → Pages</span>).</li>
+          <li><strong>Repositorio GitHub</strong>
+            con código fuente.</li>
+          <li><strong>README.md</strong>
+            con: descripción, estructura de secciones, paleta/tipo, y
+            <strong>link</strong>
+            al sitio.</li>
+          <li><strong>GitHub Pages</strong>
+            habilitado en la rama correspondiente (<span class="pill">Settings → Pages</span>).</li>
         </ul>
         <h3>Guía rápida GitHub Pages</h3>
         <ol>
-          <li>Sube los archivos (<code>index.html</code>, demás páginas y <code>styles.css</code>).</li>
-          <li>En <span class="pill">Settings → Pages</span>, selecciona la rama (p.ej. <code>main</code>) y carpeta <code>/root</code>.</li>
+          <li>Sube los archivos (<code>index.html</code>, demás páginas y
+            <code>styles.css</code>).</li>
+          <li>En
+            <span class="pill">Settings → Pages</span>, selecciona la rama (p.ej.
+            <code>main</code>) y carpeta
+            <code>/root</code>.</li>
           <li>Guarda. Espera a que se genere la URL pública del sitio.</li>
         </ol>
       </section>
-
-      <section id="cronograma">
-        <h2>7) Cronograma sugerido (septiembre–octubre)</h2>
-        <table>
-          <thead>
-            <tr><th>Semana</th><th>Hito</th><th>Resultado esperado</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>1</td><td>Mapa de sitio y rutas</td><td>Estructura de páginas definida; header/nav/footer bosquejados.</td></tr>
-            <tr><td>2</td><td>HTML base</td><td>Páginas obligatorias creadas con semántica correcta.</td></tr>
-            <tr><td>3</td><td>CSS base</td><td>Paleta y tipografía aplicadas; jerarquías y espaciados.</td></tr>
-            <tr><td>4</td><td>Optativas</td><td>Dos secciones extra completas y enlazadas.</td></tr>
-            <tr><td>5</td><td>Accesibilidad + QA</td><td>Revisión de contraste, <code>alt</code>, enlaces; correcciones.</td></tr>
-            <tr><td>6</td><td>Publicación</td><td>GitHub Pages en línea + README final.</td></tr>
-          </tbody>
-        </table>
+      <section id="cronograma" class="row">
+        <div class="twelve columns">
+          <h2>7) Cronograma sugerido (septiembre–octubre)</h2>
+          <table class="u-full-width">
+            <thead>
+              <tr><th>Semana</th><th>Hito</th><th>Resultado esperado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Mapa de sitio y rutas</td><td>Estructura de páginas definida; header/nav/footer bosquejados.</td></tr>
+              <tr><td>2</td><td>HTML base</td><td>Páginas obligatorias creadas con semántica correcta.</td></tr>
+              <tr><td>3</td><td>CSS base</td><td>Paleta y tipografía aplicadas; jerarquías y espaciados.</td></tr>
+              <tr><td>4</td><td>Optativas</td><td>Dos secciones extra completas y enlazadas.</td></tr>
+              <tr><td>5</td><td>Accesibilidad + QA</td><td>Revisión de contraste,
+                  <code>alt</code>, enlaces; correcciones.</td></tr>
+              <tr><td>6</td><td>Publicación</td><td>GitHub Pages en línea + README final.</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
-
       <section id="evaluacion">
         <h2>8) Criterios de evaluación (100%)</h2>
-        <table>
+        <table class="u-full-width">
           <thead>
             <tr><th>Criterio</th><th>Descripción</th><th>Peso</th></tr>
           </thead>
@@ -134,7 +226,6 @@
           </tbody>
         </table>
       </section>
-
       <section id="ejemplos">
         <h2>9) Ejemplos prácticos</h2>
         <h3>Barra de navegación común (fragmento)</h3>
@@ -149,7 +240,6 @@
       &lt;/ul&gt;
     &lt;/nav&gt;
   &lt;/header&gt;</pre>
-
         <h3>Estructura de carpetas sugerida</h3>
         <pre>📁 proyecto-movilidad/
   ├── index.html
@@ -162,21 +252,37 @@
       ├── img/
       └── docs/</pre>
       </section>
-
       <section id="checklist" class="checklist">
         <h2>10) Checklist de entrega final</h2>
-        <label><input type="checkbox"> Tres páginas obligatorias completas y enlazadas</label>
-        <label><input type="checkbox"> Dos páginas optativas completas y enlazadas</label>
-        <label><input type="checkbox"> Header/Nav/Footer comunes en todo el sitio</label>
-        <label><input type="checkbox"> Paleta y tipografía consistentes</label>
-        <label><input type="checkbox"> Accesibilidad básica (contraste, <code>alt</code>)</label>
-        <label><input type="checkbox"> Publicación en GitHub Pages</label>
-        <label><input type="checkbox"> README con descripción + enlace público</label>
+        <div class="row">
+          <div class="six columns">
+            <label><input type="checkbox">
+              Tres páginas obligatorias completas y enlazadas</label>
+            <label><input type="checkbox">
+              Dos páginas optativas completas y enlazadas</label>
+            <label><input type="checkbox">
+              Header/Nav/Footer comunes en todo el sitio</label>
+            <label><input type="checkbox">
+              Paleta y tipografía consistentes</label>
+          </div>
+          <div class="six columns">
+            <label><input type="checkbox">
+              Accesibilidad básica (contraste,
+              <code>alt</code>)</label>
+            <label><input type="checkbox">
+              Publicación en GitHub Pages</label>
+            <label><input type="checkbox">
+              README con descripción + enlace público</label>
+          </div>
+        </div>
       </section>
     </main>
-
-    <footer>
-      <p>Guía preparada para el Bloque 1 — Diseño Digital V. Este documento es una referencia de trabajo para septiembre–octubre.</p>
+    <footer class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <p>Guía preparada para el Bloque 1 — Diseño Digital V. Este documento es una referencia de trabajo para septiembre–octubre.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
